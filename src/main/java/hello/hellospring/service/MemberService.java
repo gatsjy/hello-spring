@@ -5,11 +5,13 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 // 순수한 자바 클래스이다. 스프링이 알아 낼 수가 없다. -> 순수한 자바코드이다 -> 이럴 때를 대비해서 어노테이션을 쓴다.
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
